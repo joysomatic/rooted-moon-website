@@ -1,0 +1,32 @@
+---
+interface Props {
+  title?: string;
+}
+
+import "../styles/global.css";
+
+const { title = "Rooted Moon Medicinals | Integrated Midwifery & Plant Medicine" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="antialiased relative min-h-screen">
+    <!-- Subtle organic background accents -->
+    <div class="pointer-events-none fixed inset-0 -z-10 bg-[#faf8f5]">
+      <div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_#e2ece4_0,_transparent_60%),radial-gradient(circle_at_bottom_left,_#f0ede6_0,_transparent_50%)]"></div>
+    </div>
+
+    <div id="top" class="relative z-10 flex flex-col min-h-screen">
+      <slot />
+    </div>
+  </body>
+</html>
