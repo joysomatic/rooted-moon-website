@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    /* Set larger baseline typography across mobile & desktop */
+    font-size: 19px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 21px;
+    }
+  }
+
   body {
     margin: 0;
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
