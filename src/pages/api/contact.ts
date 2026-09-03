@@ -18,7 +18,7 @@ export const POST: APIRoute = async ({ request }) => {
 
         const response = await resend.emails.send({
             from: 'Rooted Moon Contact <contact@rootedmoonmedicinals.com>',
-            to: [import.meta.env.PERSONAL_EMAIL],
+            to: import.meta.env.PERSONAL_EMAIL,
             subject: `New Message from ${name}`,
             text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
             replyTo: email,
